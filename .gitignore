@@ -1,0 +1,9 @@
+/.idea
+/node_modules
+
+/generated/prisma
+
+.env
+package-lock.json
+pnpm-debug.log
+pnpm-lock.yaml
