@@ -1,10 +1,21 @@
 {
-  "name": "redis-restful-api",
+  "name": "learn-mqtt",
   "version": "1.0.0",
   "description": "Project: Restful API with Redis, Node.js(Express.js) using typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:reset": "prisma migrate reset",
+    "db:migrate:status": "prisma migrate status",
+    "db:seed": "tsx prisma/seed.ts",
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"{docs,prisma,src,test}/**/*.{js,ts,jsx,tsx,json,css,scss,md}\"",
+    "test": "jest --runInBand"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +25,10 @@
     "@prisma/client": "^6.17.1",
     "argon2": "^0.44.0",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
+    "mqtt": "^5.14.1",
     "winston": "^3.18.3",
     "zod": "^4.1.12"
   },
@@ -26,6 +39,8 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/jest": "^30.0.0",
+    "@types/mqtt": "^2.5.0",
+    "@types/node": "^24.9.2",
     "@types/supertest": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
