@@ -9,9 +9,13 @@ LOG_LEVEL=string
 ```
 
 ```shell
-npm install
+pnpm install
 npx prisma migrate dev
 npx prisma generate
-npm run build
-npm start
+pnpm build
+pnpm start
+```
+
+```shell
+pm2 start dist/main.js --name social-media-be-3011
 ```

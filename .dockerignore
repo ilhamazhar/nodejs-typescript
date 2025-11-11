@@ -10,7 +10,6 @@ build
 
 Dockerfile
 .dockerignore
-pnpm-lock.yaml
 
 .env
 .env.*
