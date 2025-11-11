@@ -1,9 +1,20 @@
 /.idea
 /node_modules
 
-/generated/prisma
+.pnpm-store/
+.npm/
+.pnpm-debug.log*
+npm-debug.log*
+
+/dist
+build/
+out/
 
 .env
+.env.*
+!.env.example
+
 package-lock.json
 pnpm-debug.log
 pnpm-lock.yaml
+.env.local

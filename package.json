@@ -4,7 +4,11 @@
   "description": "Project: Restful API with Redis, Node.js(Express.js) using typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"{docs,prisma,src,test}/**/*.{js,ts,jsx,tsx,json,css,scss,md}\""
   },
   "keywords": [],
   "author": "",
@@ -13,7 +17,9 @@
   "dependencies": {
     "@prisma/client": "^6.17.1",
     "argon2": "^0.44.0",
+    "axios": "^1.13.1",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
     "winston": "^3.18.3",
